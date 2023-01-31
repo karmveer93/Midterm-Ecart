@@ -1,0 +1,24 @@
+.container-login{
+    margin-top: 50px;
+    width: 35%;
+    height: 500px;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px slategrey;
+    padding-top: 5%;
+    padding-bottom: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 50px;
+}
+.login-button{
+    margin-top: 20px;
+}

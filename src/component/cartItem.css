@@ -1,0 +1,31 @@
+.cart-item-div{
+    margin: 20px 36px;
+    padding: 12px;
+    display: flex;;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+}
+p{
+    font-size: medium;
+    margin-bottom: 80px;
+}
+img{
+    width: 120px;
+    height: 160px;
+}
+.cart-title-price{
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+.cart-delete{
+     position: relative;
+     right: 0px;
+}
+.deleteButton{
+    border: none;
+    background-color: white;
+}

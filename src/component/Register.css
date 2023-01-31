@@ -1,0 +1,19 @@
+.container-register{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 35%;
+    height: 600px;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px slategrey;
+    padding-bottom: 30px;
+    padding-left: 8%;
+    padding-right: 8%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container-register > input{
+    margin-bottom: 10px;
+} 

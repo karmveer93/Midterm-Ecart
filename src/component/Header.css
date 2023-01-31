@@ -1,0 +1,60 @@
+.icon-container{
+    display: flex;
+    align-items: center;
+}
+.flex-item{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    }
+.icon-span{
+    display: flex;
+}
+/* .header-main{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    top: 0;
+} */
+.dropDowanMenuDiv{
+    display: flex;
+    align-items: center;
+}
+.dropDowanMenuDiv > span{
+    width: 50%;
+}
+.main-div{
+    display: flex;
+    justify-content: space-between;
+}
+.main_a{
+    display: flex;
+    
+}
+.h1-blue{
+    color: rgb(0,176,240);
+}
+.h1-black{
+    color: rgb(34, 32, 32);
+}
+.dropdown-button{
+    width: 200px;
+    box-sizing: border-box ;
+    border: 1px slategray;
+    box-shadow: 2px 2px rgb(115, 115, 115);
+}
+.header-left{
+    width: 600px;
+}
+li{
+    margin-left: 60px;
+}
+.second-Header{
+    justify-content: center;
+}
+.main-Header-margin{
+    
+    margin-left: 50px;
+    margin-right: 50px
+}
