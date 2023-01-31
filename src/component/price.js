@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
-import { cartSelector } from '../reducer/cartReducer'
+import React from 'react'
+
 import "./price.css"
 
 function Price(props) {
