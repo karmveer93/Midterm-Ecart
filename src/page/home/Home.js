@@ -9,7 +9,7 @@ function Home() {
   // console.log("At the main fun top")
     const [products, setProducts] = useState([]) 
     const [error, setError] = useState() 
-    const [count, setCount] = useState("home")
+    // const [count, setCount] = useState("home")
     // const [click, setClick] = useState(0)
     // const [click1, setClick1] = useState(0)
     useEffect(

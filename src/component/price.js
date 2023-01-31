@@ -10,7 +10,7 @@ function Price(props) {
         // console.log(inPrice)
         inPrice= item.price+inPrice
         // console.log(inPrice)
-        
+       return inPrice 
     })
     let subtotal = inPrice.toFixed(2)
      if(subtotal>1){total = (Number(subtotal) + 10).toFixed(2)}

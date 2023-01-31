@@ -1,6 +1,6 @@
 
 import "./cart.css"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Header from "../../component/Header"
 import Footer from "../../component/Footer"
 import CartItem from "../../component/CartItem"
@@ -12,7 +12,7 @@ function Cart() {
   // console.log("At the main fun top")
     // const [products, setProducts] = useState([]) 
     // const [error, setError] = useState() 
-    const [count, setCount] = useState()
+    // const [count, setCount] = useState()
     // const [click, setClick] = useState(0)
     // const [click1, setClick1] = useState(0)
     // useEffect(
@@ -35,7 +35,7 @@ function Cart() {
       // console.log(products)
     return (
       <>
-       <Header count={count}/>
+       <Header />
     <div className="container mt-3">
       {
         products.length === 0 &&
