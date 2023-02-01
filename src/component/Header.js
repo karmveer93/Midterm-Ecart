@@ -27,7 +27,7 @@ const cartItemCount =useSelector(cartSelector).length
 
 
    return (
-    <div className='main-Header-margin'>
+    <div className='main-Header-margi'>
        <div className='header-main'>
          <nav className="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="red">
            <div className="container-fluid">

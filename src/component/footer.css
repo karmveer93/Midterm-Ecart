@@ -1,6 +1,6 @@
 .flex-footer{
     display: flex;
-    justify-content: end;
+    /* justify-content: end; */
     position: fixed;
     bottom: 0px;
     width: 100%;
