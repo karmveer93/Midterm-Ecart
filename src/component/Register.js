@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import { NavLink } from 'react-router-dom'
 import './Register.css'
 
 function Register() {
   const [user, setUser] = useState({})
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   function handSubmit(e){
     e.preventDefault()
   //  fetch("http://localhost:4100/api/auth/register", {
