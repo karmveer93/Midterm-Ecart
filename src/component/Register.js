@@ -9,24 +9,24 @@ function Register() {
   const navigate = useNavigate()
   function handSubmit(e){
     e.preventDefault()
-   fetch("http://localhost:4100/api/auth/register", {
-    method: "POST", 
-    body: JSON.stringify(user),
-    headers: {
-      "Content-Type": "application/json"
-    }
-   }).then((res) =>{
-    console.log("register done")
-    if (res.status === 200){
-      navigate("/login")
-    }
-    else{
-      alert("Unauthorized Request")
-    }
-   })
-   .catch((err)=> {
-    console.log(err)
-   })
+  //  fetch("http://localhost:4100/api/auth/register", {
+  //   method: "POST", 
+  //   body: JSON.stringify(user),
+  //   headers: {
+  //     "Content-Type": "application/json"
+  //   }
+  //  }).then((res) =>{
+  //   console.log("register done")
+  //   if (res.status === 200){
+  //     navigate("/login")
+  //   }
+  //   else{
+  //     alert("Unauthorized Request")
+  //   }
+  //  })
+  //  .catch((err)=> {
+  //   console.log(err)
+  //  })
   }
   return (
     <>
