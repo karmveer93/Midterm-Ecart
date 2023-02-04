@@ -2,12 +2,15 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { add, cartSelector, deleteTask } from '../reducer/cartReducer'
+import { favAdd, favDelete, favSelector } from '../reducer/favItem'
 import { addProductDetails } from '../reducer/productDetails'
 import './Productcards.css'
 
 function ProductCard(props) {
   let item = useSelector(cartSelector)
+  let fevItem = useSelector(favSelector)
   let xyz = false
+  let fev = true
   let product = props.item
   const dispatch = useDispatch()
 // function check(){
@@ -22,6 +25,20 @@ function ProductCard(props) {
       }
       return xyz
     })
+    fevItem.map((pro)=>{
+      if (pro.id === product.id){
+        // setProductStatus(true)
+        // console.log("I am in")
+        fev=false
+      }
+      return xyz
+    })
+    // if(favItem.length>0){
+    //   console.log("in the if")
+    //   if(fevItem.id===product.id){
+    //     console.log("in the if if")
+    //   fev=false
+    // }}
   function handelAddToCartEvent (){
     // old way totransfer data 
     // // console.log("Add To Cart")
@@ -48,19 +65,37 @@ function ProductCard(props) {
   }
   function removeFromCart(){
     if(xyz){
-      // console.log("inside the remove")
+      // console.log(item)
       dispatch(deleteTask(product))}
-  }
+  }   
   function productDetailsFun(){
+
     dispatch(addProductDetails(product))
     console.log(product)
+  }
+  function addToFav(){
+    // console.log("I am in add fav")
+    dispatch(favAdd(product))
+    // fev = false
+    // console.log(fevItem)  
+
+  }
+  function removeToFav(){
+    dispatch(favDelete(product))
+    // fev = true
+    //  console.log("I am in remoave fav")
+    //  console.log(fevItem)
+
   }
   return (
     <div> 
       <div className="card card-main" >
-      <span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill position-absolute top-0 end-0 heart-position" viewBox="0 0 16 16">
+      {fev === true ?<span ><NavLink onClick={addToFav}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill position-absolute top-0 end-0 heart-position" viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-</svg></span>
+</svg></NavLink></span> :
+<span ><NavLink onClick={removeToFav}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi favcolor bi-heart-fill position-absolute top-0 end-0 heart-position" viewBox="0 0 16 16">
+  <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+</svg></NavLink></span>}
 <div className='img-div'><NavLink className="dropdown-item" to="/proDis" onClick={productDetailsFun}><img src={product.image} className="card-img-top img-hight" alt="..."/></NavLink></div>
   <div className="card-body ">
     <p className="card-text pera-hight"><span className='fw-bold'>Brand,</span>{product.title}</p>

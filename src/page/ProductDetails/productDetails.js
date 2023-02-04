@@ -2,7 +2,6 @@
 import "./productDetails.css"
 import React from 'react'
 import Header from "../../component/Header"
-import Footer from "../../component/Footer"
 import { useDispatch, useSelector } from "react-redux"
 import { productSelector } from "../../reducer/productDetails"
 import { add, cartSelector, deleteTask } from '../../reducer/cartReducer'

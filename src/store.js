@@ -3,6 +3,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./reducer/cartReducer";
 import productReducer from "./reducer/productDetails";
+import favReducer from "./reducer/favItem";
 
 //use configureStore function to create the store
 
@@ -10,7 +11,8 @@ import productReducer from "./reducer/productDetails";
 const store=configureStore({
     reducer:{
         cartItems:cartReducer,
-        productDetails:productReducer
+        productDetails:productReducer,
+        favItems:favReducer
     }
 })
 

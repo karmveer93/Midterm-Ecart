@@ -8,13 +8,14 @@
     display: flex;
     margin: 10%;
     margin-top: 3%;
+    height: 100vh;
 }
 .cart-Items > img{
     width:100%;
-     height: inherit;  
+     height: 50%;  
  }
  .card-bodys{
     margin: 10%;
     width:70%;
-    height: 100%;
+    height: 50%;
  }

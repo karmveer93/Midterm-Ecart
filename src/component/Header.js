@@ -35,7 +35,7 @@ const cartItemCount =useSelector(cartSelector).length
                <h1 className='h1-blue'>SHOP</h1><h1 className='h1-black'>LANE</h1>
              </NavLink>
              <div className="collapse navbar-collapse header-left " id="navbarSupportedContent">
-               <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-item">
+               <ul className="navbar-nav me-auto mb-6 mb-lg-5 flex-item">
                  <li className="nav-item dropdown ">
                    <button className="btn btn-light dropdown-toggle dropdown-button  " data-bs-toggle="dropdown" aria-expanded="false"><div className='dropDowanMenuDiv'><span>
                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
@@ -43,9 +43,10 @@ const cartItemCount =useSelector(cartSelector).length
                        <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                      </svg></span> <span>Log In <br></br> or &nbsp;Sing Up</span></div>
                    </button>
-                   <ul className="dropdown-menu dropdown-menu-dark">               
-                     <li><NavLink className="dropdown-item" to="/login">Log In</NavLink></li>
+                   <ul className="dropdown-menu dropdown-menu-wight">               
+                     <li><NavLink className="dropdown-item mb-2" to="/login">Log In</NavLink></li>
                      <li><NavLink className="dropdown-item" to="/register">Sing Up</NavLink></li>
+                     <li><NavLink className="dropdown-item" to="/fav">Favourite</NavLink></li>
                    </ul>
                  </li>
                  <li className="nav-item">
