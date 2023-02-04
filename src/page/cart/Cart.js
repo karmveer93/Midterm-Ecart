@@ -32,7 +32,8 @@ function Cart() {
     // }
     
     let products = useSelector(cartSelector)
-      // console.log(products)
+  
+      console.log(products)
     return (
       <>
        <Header />

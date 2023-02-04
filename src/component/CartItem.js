@@ -15,7 +15,7 @@ function CartItem(props) {
     <div className='cart-item-div  border-top border-bottom d-flex '>
       <div><img src={cartProduct.image} alt={"#"}></img></div>
       <div className='cart-title-price p-2 w-100'>
-      <p className="card-text pera-hight"><span className='fw-bold'>Brand,</span>{cartProduct.title}</p>
+      <p className="card-text "><span className='fw-bold'>Brand, <br></br></span>{cartProduct.title}</p>
       <h3>${cartProduct.price}</h3>
       </div>
       <div className='cart-delete p-2 flex-shrink-1'>

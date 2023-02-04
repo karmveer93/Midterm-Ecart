@@ -1,6 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { NavLink } from 'react-router-dom'
 import { add, cartSelector, deleteTask } from '../reducer/cartReducer'
+import { addProductDetails } from '../reducer/productDetails'
 import './Productcards.css'
 
 function ProductCard(props) {
@@ -49,13 +51,17 @@ function ProductCard(props) {
       // console.log("inside the remove")
       dispatch(deleteTask(product))}
   }
+  function productDetailsFun(){
+    dispatch(addProductDetails(product))
+    console.log(product)
+  }
   return (
     <div> 
       <div className="card card-main" >
       <span ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill position-absolute top-0 end-0 heart-position" viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
 </svg></span>
-<div className='img-div'><img src={product.image} className="card-img-top img-hight" alt="..."/></div>
+<div className='img-div'><NavLink className="dropdown-item" to="/proDis" onClick={productDetailsFun}><img src={product.image} className="card-img-top img-hight" alt="..."/></NavLink></div>
   <div className="card-body ">
     <p className="card-text pera-hight"><span className='fw-bold'>Brand,</span>{product.title}</p>
     <div className='star '>
