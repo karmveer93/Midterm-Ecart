@@ -3,10 +3,6 @@
 
 import { createSlice } from "@reduxjs/toolkit"
 // import { useSelector } from "react-redux"
-
-
-
-
 // to have a initial data 
 // initially there are no oitem in cart.
 const initialState ={
